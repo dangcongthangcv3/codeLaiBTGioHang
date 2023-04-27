@@ -14,25 +14,18 @@ export default class Modal extends Component {
                         </div>
 
                         <div className="modal-body">
-                            <table className='table'>
-                                <thead>
-                                    <tr>
-                                        <th>Mã</th>
-                                        <th>Tên</th>
-                                        <th>Hình ảnh</th>
-                                        <th>Đơn giá</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>{content.id}</td>
-                                        <td>{content.name}</td>
-                                        <td><img src={content.image} alt=".." style={{width:50}} /></td>
-                                        <td>{content.price}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div className='row'>
+                                <div className="col-md-6">
+                                    <img src={content.image} alt=".." style={{width:'100%'}}/>
+                                </div>
+                                <div className="col-md-6">
+                                    <h1>{content.name}</h1>
+                                    <p><b>Price</b>: {content.price}</p>
+                                    <b>Mô tả</b>
+                                    <p>
+                                        {content.description}</p>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
